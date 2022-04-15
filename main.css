@@ -1,0 +1,249 @@
+/*
+Pre-Requisite
+*/
+
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+
+:root {
+	--Red: hsl(0, 78%, 62%);
+	--Cyan: hsl(180, 62%, 55%);
+	--Orange: hsl(34, 97%, 64%);
+	--Blue: hsl(212, 86%, 64%);
+	--Very-Dark-Blue: hsl(234, 12%, 34%);
+	--Grayish-Blue: hsl(229, 6%, 66%);
+	--Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	font-family: 'Poppins', sans-serif;
+	background-color: #f0f0f0;
+	/*overflow-y: hidden;*/
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	margin-top: 10px;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 50px;
+}
+
+
+/*
+Header
+*/
+
+.intro {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+}
+
+.intro h1 span:first-child {
+	font-weight: 150;
+	color: var(--Grayish-Blue);
+	font-size: 28px;
+	text-align: center;
+	gap: 2px;
+}
+
+.intro h1 span:last-child {
+	opacity: 0.75;
+	font-weight: bolder;
+}
+
+.intro p {
+	font-size: 12px;
+	color: var(--Very-Dark-Blue);
+	text-align: center;
+	opacity: 0.6;
+	word-spacing: 2.5px;
+}
+
+
+/*
+Main Contents
+*/
+
+
+.cards {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
+}
+
+.cards .single-card {
+	background-color: var(--Very-Light-Gray);
+}
+
+.cards .double-cards {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	gap: 15px;
+}
+
+.cards .double-cards span {
+	background-color: var(--Very-Light-Gray);
+}
+
+.supervisor {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 15px;
+	border-top: solid 2px var(--Cyan);
+	padding: 1.5rem;
+	border-radius: 5px;
+	box-shadow: 1px 4px 6px 2px gray;
+}
+
+.team-builder {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 15px;
+	border-top: solid 2px var(--Red);
+	padding: 1.5rem;
+	border-radius: 5px;
+	box-shadow: 1px 4px 6px 2px gray;
+}
+
+.karma {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 15px;
+	border-top: solid 2px var(--Orange);
+	padding: 1.5rem;
+	border-radius: 5px;
+	box-shadow: 1px 4px 6px 2px gray;
+}
+
+
+.calculator {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 15px;
+	border-top: solid 2px var(--Blue);
+	padding: 1.5rem;
+	border-radius: 5px;
+	box-shadow: 1px 4px 6px 2px gray;
+}
+
+.cards h2 {
+	font-size: 20px;
+}
+
+.cards p {
+	font-size: 10px;
+	color: var(--Very-Dark-Blue);
+	opacity: 0.75;
+}
+
+.cards .image-holder {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.cards .image-holder img {
+	width: 40px;
+	height: 40px;
+	margin-right: -10px;
+}
+
+
+footer {
+	margin-top: 15px;
+}
+
+
+@media (max-width: 760px) {
+	body {
+		margin-block: 20px;
+		width: 100%;
+	}
+
+	.container {
+		width: 100%;
+	}
+
+	.content {
+		width: 100%;
+	}
+
+	.intro {
+		width: 80%;
+	}
+
+	.intro h1 span:first-child {
+		width: 100%;
+		font-size: 21px;
+	}
+
+	.intro h1 span {
+		width: 100%;
+		font-size: 21px;
+	}
+
+	.intro p {
+		width: 85%;
+		font-size: 13px;
+	}
+	
+	.cards {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.cards .double-cards {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.single-card, .double-cards > span {
+		width: 100%;
+	}
+}
+
+
+@media (max-width: 400px) {
+	.intro p {
+		width: 95%;
+	}
+}
